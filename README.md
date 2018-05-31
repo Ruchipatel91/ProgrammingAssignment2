@@ -100,6 +100,30 @@ In order to complete this assignment, you must do the following:
 5.  Submit to Coursera the URL to your GitHub repository that contains
     the completed R code for the assignment.
 
-### Grading
+###  Check the code by following below steps:
 
-This assignment will be graded via peer assessment.
+> a<-makeCacheMatrix(matrix(c(4,3,3,2),2,2)) ##condition: for this code matrix has to be invertible.
+
+> a$get()
+     [,1] [,2]
+[1,]    4    3
+[2,]    3    2
+
+> a$get_inverse()
+NULL
+
+> cacheSolve(a)
+     [,1] [,2]
+[1,]   -2    3
+[2,]    3   -4
+
+> a$get_inverse()
+     [,1] [,2]
+[1,]   -2    3
+[2,]    3   -4
+
+> cacheSolve(a)
+Getting cached MATRIX
+     [,1] [,2]
+[1,]   -2    3
+[2,]    3   -4
